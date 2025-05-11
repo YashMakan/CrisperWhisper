@@ -157,6 +157,10 @@ if audio_bytes:
             """,
             unsafe_allow_html=True,
         )
+        
+        st.subheader("Timestamps (JSON):")
+        st.json(transcription["chunks"])
+        
     except Exception as e:
         st.error(f"An error occurred during transcription: {e}")
 
