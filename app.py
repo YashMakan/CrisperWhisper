@@ -103,8 +103,7 @@ def transcribe(audio_bytes: bytes) -> Dict[str, Any]:
     return transcription
 
 
-args = parse_arguments()
-model_id = args.model_id
+model_id = "nyrahealth/CrisperWhisper"
 
 # Set up device and data type for processing
 device: str = "cuda:0" if torch.cuda.is_available() else "cpu"
